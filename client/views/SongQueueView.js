@@ -7,10 +7,16 @@ var SongQueueView = Backbone.View.extend({
     this.render();
 
     this.collection.on('add', this.render, this);
+    this.collection.on('remove', this.render, this);
     this.collection.on('songChanged', function() {
       console.log('SongQueueView says: Song changed!!');
+      this.render();
     }, this);
+    // this.model.on("changed: playCount", t)
   },
+
+  //renderwithstyle
+
 
   render: function() {
     //detach children
@@ -19,7 +25,7 @@ var SongQueueView = Backbone.View.extend({
     //reappend the children to the view
     this.$el.html('<th>Play List</th>').append(
       this.collection.map(function(song){
-        return new SongQueueEntryView({model: song}).render();
+        return new SongQueueEntryView({model: song}).render(song.attributes.current ? true : false);
       })
     );
   }

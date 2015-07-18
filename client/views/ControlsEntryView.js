@@ -13,7 +13,8 @@ var ControlsEntryView = Backbone.View.extend({
     'click .next': function() {
       // this.model.play();
       this.collection.playNext();
-      console.log('LibraryEntryView.click. This model.enqueue called, model:', this.model);
+      //this.trigger('playNext',this);
+      console.log('next.click. model:', this.collection);
       },
 
     'click .prev': function() {

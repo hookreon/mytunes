@@ -11,14 +11,21 @@ var ControlsView = Backbone.View.extend({
   events: {
     'click .prev': function() {
       // this.model.play();
-      this.collection.playNext();
-      console.log('LibraryEntryView.click. This model.enqueue called, model:', this.collection.playPrev);
+      console.log('Prev Button Clicked. this.collection:',this.collection);
+      //this.collection.playPrev();
+      this.collection.trigger('playPrev');
+
+      //console.log('LibraryEntryView.click. This model.enqueue called, model:', this.collection.playPrev);
       },
 
     'click .next': function() {
       // this.model.play();
-      this.collection.playPrev();
-      console.log('LibraryEntryView.click. This model.enqueue called, model:', this.collection.playNext);
+      //remove
+      console.log('Next Button Clicked. this.collection:',this.collection);
+      //this.collection.playNext();
+      this.collection.trigger('playNext');
+
+      //console.log('this.collection.playNext);
       },
 
     },
