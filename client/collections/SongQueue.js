@@ -11,6 +11,8 @@ var SongQueue = Songs.extend({
 
   },
 
+  songNumber: 0,
+
   enqueue: function() {
     console.log('SongQueue.enqueue called. SongQueue:',this);
     if(this.length === 1) {
@@ -22,20 +24,19 @@ var SongQueue = Songs.extend({
   },
 
   playNext: function() {
-    if(songNumber < this.length-1) {
+    if(this.songNumber < this.length-1) {
       this.songNumber++;
       this.at(this.songNumber).play();
     }
   },
 
   playPrev: function() {
-    if(songNumber > 0) {
+    if(this.songNumber > 0) {
       this.songNumber--;
       this.at(this.songNumber).play();
     }
   },
 
-   songNumber: 0,
 
   // function() {
   //   return this.defaults[songCount];
