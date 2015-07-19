@@ -17,12 +17,17 @@ var AppView = Backbone.View.extend({
   },
 
   render: function(){
-    return this.$el.html([
+    this.$el.html([
       this.playerView.$el,
       this.controlsView.$el,
+    ]);
+    var $wrapper = $('<div class="songsWrapper" />');
+    $wrapper.append([
       this.libraryView.$el,
       this.queueView.$el
-    ]);
+    ])
+    this.$el.append($wrapper);
+    return this.$el;
   }
 
 });

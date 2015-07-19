@@ -38,7 +38,7 @@ var ControlsView = Backbone.View.extend({
 
     // this.$el.children().detach();
 
-    this.$el.html('<button class="prev">previous</button><button class="next">next</button>').append();
+    this.$el.html('<div class="buttonContainer"><button class="prev waves-effect waves-light btn">previous</button><button class="next waves-effect waves-light btn">next</button></div>').append();
   }
 
 
