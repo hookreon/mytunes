@@ -1,0 +1,66 @@
+audio {
+  width: 100%;
+  padding:5em 0 0;
+}
+.buttonContainer {
+  width:100%;
+  text-align: center;
+  margin-top:3em;
+}
+.buttonContainer button {
+  margin: 5px;
+  min-width: 200px;
+}
+.libraryHeading {
+
+}
+.libraryTable, .queueTable {
+  float: left;
+  min-width:30%;
+  text-align: center;
+  border: 1px solid #ee6e73;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:30px 20px;
+  margin:3em 2em;
+}
+.libraryTable {
+  margin-left:18.5%;
+}
+h1 {
+  font-weight:200;
+  font-size:3em;
+  line-height: 1.5em;
+  letter-spacing: -1px;
+}
+h2 {
+  font-size:2em;
+  cursor: pointer;
+  margin-top:0;
+}
+h3 {
+  font-size:1em;
+  font-weight: normal;
+  cursor: pointer;
+  display: block;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.artistClass {
+  font-weight:bold;
+  margin-top:.2em;
+}
+button.remove.waves-effect {
+  float:right;
+  margin-top:-2.2em;
+  height: 20px;
+  line-height: 5px;
+  padding:5px;
+}
+.colorSong {
+  color: #ee6e73;
+}
+.songsWrapper {
+  margin:0 auto;
+}
